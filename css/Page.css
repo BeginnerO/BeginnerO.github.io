@@ -106,7 +106,18 @@
 	font-weight:500;
 
 }
-
+/*Footer*/
+.bo-footer{
+	position:relative;
+	bottom:0;
+	width:100%;
+	background-color:rgba(33,150,243,0.4);
+	text-align: center;
+	color:#eee !important;
+}
+.bo-footer div{
+	margin-bottom:0px;
+}
 /**/
 .bo-mobile-navi{
 	transition: 500ms;

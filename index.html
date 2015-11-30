@@ -22,9 +22,9 @@
 			<div class='item bo-menu-pusher tablet-hide computer-hide'>
 				<i class='sidebar icon'></i>
 			</div>
-			<a class="item mobile-hide">Documentation</a>
-			<a class="item mobile-hide">Get Started</a>
-			<a class="item mobile-hide">Componant</a>
+			<div class='right menu'>
+				<a class="item mobile-hide" href='https://github.com/BeginnerO/BOSlider'>Go to git</a>
+			</div>
 		</div>
 		<div class="ui left fixed vertical menu bo-mobile-navi" style='left: -440px'>
 			<div class="col s12 item">
@@ -82,8 +82,9 @@
 				<li class='bo-each'>
 					<div style='background-color:#bbdefb;' class='main-typo'>
 						<h1 style='color:#fff'>BOSLIDER</h1>
-						<p style='color:#fff'>Version 0.8 Beta</p>
-						<a href="#" class="bo-button-sharp">GET STARTED</a>
+						<h3 style='color:#fff'>Make your Slide more easily.</h3>
+						<p style='color:#fff'>Version 0.8.0 Beta</p>
+						<a href="#GettingStart" id='' class="bo-button-sharp">GET STARTED</a>
 					</div>
 				</li>
 			</ul>
@@ -91,7 +92,7 @@
 		<div class="container bo-main-content">
 			<div class="row">
 				<div class="col s12 m10 l10 row">
-					<h1 class="col s12 scrollspy" style="" id="">Getting Started</h1>
+					<h1 class="col s12 scrollspy" style="" id="GettingStart">Getting Started</h1>
 					<hr class="col s12">
 					<div id="Installation" class="scrollspy section col s12">
 						<h2 class="col s12">Installation</h2>
@@ -100,7 +101,7 @@
 	               		</p>
 
 	               		<div class='content-wrapper col s12'>
-	               			<pre><code>git clone https://github.com/dhguswns23/BOSlider.git</code></pre>
+	               			<pre><code>git clone https://github.com/BeginnerO/BOSlider.git</code></pre>
 	               		</div>
 
 	               		<h4 class="col s12">Git Install - Linux</h4>
@@ -123,7 +124,7 @@
 	               			Or If you not, you can also download zip file.
 	               		</p>
 	               		<a class="btn-large blue lighten-4 col s7">Download Now</a>
-	               		<a class="btn-large blue lighten-2 col s4 push-s1">Go git</a>
+	               		<a class="btn-large blue lighten-2 col s4 push-s1" href='https://github.com/BeginnerO/BOSlider'>Go git</a>
                		</div>
                		<div class="scrollspy col s12" id ="HTMLSchema">
 	               		<h2 class="col s12">HTML Schema</h2>
@@ -1202,6 +1203,7 @@
 					</div><!--Reactivity section-->
 					<div class='col s12 scrollspy' id='ButtonChanger'>
 						<h2 class='col s12'>Button Changer</h2>
+						<h5 class='col s12' style='color:red;'>-Removed after v0.8.0</h2>
 						<p class='col s12'>If you want to change button, why don't you use this? not just change using CSS, you can change every css using this method. There are some CSS properties that can't change only using a CSS because of reactivity. (but if you set <span class='bo-content-highlight'>Reactivity</span> as false, then you can.)</p>
 						<div class='col s12'>
 							<div class='bo-slider twelveth-slider'>
@@ -1544,6 +1546,34 @@
 			</div>
 		</div>
 	</BODY>
+	<footer class='bo-footer col s12'>
+		<div class='row'>
+			<div class='col s12 m4'>
+				<h3 class='col s12' style='margin-bottom:2px'>
+					Contact
+				</h3>
+				<p class='col s12'>
+					If you have any suggestions or bug reports, please email me to
+					<a href='dhguswns23@unist.ac.kr'>dhguswns23@unist.ac.kr</a>
+				</p>
+			</div>
+			<div class='col s12 m4'>
+				<h3 class='col s12' style='margin-bottom:2px'>
+					License
+				</h3>
+				<p class='col s12'>
+					BOSlider is released under MIT License.
+				</p>
+			</div>
+			<div class='col s12 m4'>
+				<h3 class='col s12' style='margin-bottom:2px'>
+					More about
+				</h3>
+				<a href='https://github.com/beginnero/boslider' class='btn-large blue lighten-4 col s12'>GO to GIT</a>
+			</div>
+		</div>
+
+	</footer>
 	<!--Jquery CDN-->
 	<script src='js/jquery.js'></script>
 
@@ -1645,11 +1675,22 @@
 				On : false,
 			},
 			Content : {
-				1:"1.6/4",
+				1:"1.6/5",
 			},
 			Height: "2:0.8",
 			Mover : false,
-		}).boButton({'background':'rgba(33,150,243,0.4)','border':'none','color':'rgba(250,250,250,0.8)'});
+		}).boButton({
+			'background':'rgba(33,150,243,0.4)',
+			'border':'none',
+			'color':'rgba(250,250,250,0.8)'
+		}).boTypo({
+		 	'color' : '#fff',
+		 	'font-weight' : '400',
+		 }).boTypo({
+		 	'font-size' : '80px',
+		 },{
+		 	Which : ['h1'],
+		 });
 		$('.table-of-contents').pushpin({ 
 			top: $('.table-of-contents').offset().top-70,
 			offset : 70,
