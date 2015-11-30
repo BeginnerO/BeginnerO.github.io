@@ -1,4 +1,4 @@
-/*BOSlider 0.7.0 
+/*BOSlider 0.8.1
 *
 *
 *Copyright (C) 2015 BeginnerO
@@ -234,7 +234,7 @@
 
 			if(bo_window_width <= 679){
 				$(this).children('.bo-nav')
-					.css('top','85%');
+					.css('top','80%');
 				$(this).children('ul').children('li').children('div')
 				.children('.bo-button-sharp')
 					.css('font-size','15px')
