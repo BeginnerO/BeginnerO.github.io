@@ -1,0 +1,1661 @@
+<!DOCTYPE HTML>
+<HTML lang='ko'>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<HEAD>
+		<TITLE>
+			BOSlider
+		</TITLE>
+
+		<!--CSS CDN-->
+		<link rel='stylesheet' type='text/css' href='css/BOSlider.css'>
+		<link rel='stylesheet' type='text/css' href='css/Page.css'>
+		<link rel='stylesheet' type='text/css' href='css/materialize.css'>
+		<link rel="stylesheet" href="css/styles/github.css">
+		<link rel='stylesheet' type='text/css' href='css/menu.css'>
+		<link rel='stylesheet' type='text/css' href='css/icon.css'>
+
+
+	</HEAD>
+	<BODY style=>
+		<div class="ui top fixed menu bo-navi borderless">
+			<div class='item bo-menu-pusher tablet-hide computer-hide'>
+				<i class='sidebar icon'></i>
+			</div>
+			<a class="item mobile-hide">Documentation</a>
+			<a class="item mobile-hide">Get Started</a>
+			<a class="item mobile-hide">Componant</a>
+		</div>
+		<div class="ui left fixed vertical menu bo-mobile-navi" style='left: -440px'>
+			<div class="col s12 item">
+							Getting Started
+						</div>
+						<a href="#Installation" class="col s12 item">
+							설치
+						</a>
+						<a href="#HTMLSchema" class="col s12 item">
+							HTML 구조
+						</a>
+						<div class="col s12 item">
+							구성요소
+						</div>
+						<a href="#StandardContent" class="col s12 item">
+							기본컨텐츠
+						</a>
+						<a href="#InnerContent" class="col s12 item">
+							내부 요소들
+						</a>
+						<a href="#ComponantButton" class="col s12 item">
+							버튼
+						</a>
+						<div class="col s12 item">
+							자바스크립트
+						</div>
+						<a href="#Size" class="col s12 item">
+							크기
+						</a>
+						<a href="#ContentHeight" class="col s12 item">
+							컨텐츠 높이
+						</a>
+						<a href="#SideMover" class="col s12 item">
+							옆슬라이드 보기
+						</a>
+						<a href="#Navigation" class="col s12 item">
+							네비게이션
+						</a>
+						<a href="#AutoSlide" class="col s12 item">
+							자동 슬라이드
+						</a>
+						<a href="#Reactivity" class="col s12 item">
+							반응성
+						</a>
+						<a href="#ButtonChanger" class="col s12 item">
+							버튼 수정 메소드
+						</a>
+						<a href="#ContentChanger" class="col s12 item">
+							컨텐츠 수정 메소
+						</a>
+		</div>
+	
+		<div class='bo-slider other bo-main-slider'>
+			<ul class='bo-content'>
+				<li class='bo-each'>
+					<div style='background-color:#bbdefb;' class='main-typo'>
+						<h1 style='color:#fff'>BOSLIDER</h1>
+						<p style='color:#fff'>Version 0.8 Beta</p>
+						<a href="#" class="bo-button-sharp">GET STARTED</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="container bo-main-content">
+			<div class="row">
+				<div class="col s12 m10 l10 row">
+					<h1 class="col s12 scrollspy" style="" id="">시작하기</h1>
+					<hr class="col s12">
+					<div id="Installation" class="scrollspy section col s12">
+						<h2 class="col s12">설치</h2>
+						<p class="col s12">
+							git에 대해 친숙하다면 git으로 편하게 설치 할 수 있습니다.
+	               		</p>
+
+	               		<div class='content-wrapper col s12'>
+	               			<pre><code>git clone https://github.com/dhguswns23/BOSlider.git</code></pre>
+	               		</div>
+
+	               		<h4 class="col s12">Git 설치 - 리눅스</h4>
+	               		<p class="col s12">우분투를 사용하신다면, apt-get 명령어를 통해 설치 할 수 있습니다.</p>
+	               		<div class="content-wrapper col s12">
+	               			<pre><code>apt-get install git</code></pre>
+	               		</div>
+	               		<h4 class="col s12">Git 설치 - 윈도우</h4>
+	               		<p class="col s12">윈도우 사용자라면 github 홈페이지에서 바로 다운로드 받으시면 됩니다.</p>
+	               		<div class="content-wrapper col s12">
+	               			<pre><code>http://msysgit.github.com/</code></pre>
+	               		</div>
+	               		<h4 class="col s12">Git 설치 - 맥</h4>
+	               		<p class="col s12">아래의 웹사이트에서 OSX-Installer를 다운 받으세요.</p>
+	               		<div class="content-wrapper col s12">
+	               			<pre><code>http://sourceforge.net/projects/git-osx-installer/</code></pre>
+	               		</div>
+	               		<h3 class="col s12">직접 다운로드 받기</h3>
+	               		<p class="col s12">
+	               			만약 git을 잘 모르신다면 아래의 링크에서 직접 다운로드 받으세요.
+	               		</p>
+	               		<a class="btn-large blue lighten-4 col s7">다운로드</a>
+	               		<a class="btn-large blue lighten-2 col s4 push-s1">git 가기</a>
+               		</div>
+               		<div class="scrollspy col s12" id ="HTMLSchema">
+	               		<h2 class="col s12">HTML 구조</h2>
+
+	               		<p class="col s12">구조는 꽤 간단합니다. 하지만 BOSlider를<a href ="http://jquery.com/">jquery</a> for using BOSlider.</p>
+
+	               		<div class='content-wrapper col s12'>
+	               			<pre><code class="html xml">&lt;html&gt;
+	&lt;!--CSS Link--&gt;
+	&lt;link rel='stylesheet' type='text/css' href='css/BOSlider.css'&gt;
+	&lt;body&gt;
+		&lt;!--Your Contents may be here.--&gt;
+	&lt;/body&gt;
+	&lt;!--Jquery Link--&gt;
+	&lt;script src='js/jquery.js'>&lt;/script&gt;
+	&lt;!--Javascript Link--&gt;
+	&lt;script src='js/BOSlider.js'>&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+	               		</div>
+               		</div>
+					<h1 class="col s12 scrollspy" style="" id="">Componant</h1>
+					<hr class="col s12">
+					<div class="scrollspy section col s12" id="StandardContent">
+						<h2 class="col s12">A Standard Slider</h5>
+						<p class='col s12'>Just simple slider without no additional options.<span class='bo-content-highlight'>One thing that you should know is BOSlider inherit parent's width.</span></p>
+						<div class="col s12">
+							<div class='bo-slider first-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="wrapper-header col s12">
+							HTML code
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code class='html'>&lt;div class='bo-slider'&gt;
+		&lt;ul class='bo-content'&gt;
+			&lt;li class='bo-each' style='background-image:url("image1.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image2.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image3.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image4.jpg")'&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;</code></pre>
+						</div>
+						<div class="wrapper-header col s12">
+							Jquery Code
+						</h4>
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code>$('.bo-slider').boslider();</code></pre>
+						</div>
+						<div class="col s12 content-warning">
+							If you want to use two or more slide in one pages, <a href="http://api.jquery.com/?s=selector">Jquery Selector</a> shouldn't be '.bo-slider'.
+							To solve this problem, just use other selector.
+						</div>
+					</div>
+					<div class="scrollspy section col s12" id="InnerContent">
+						<h2 class="col s12">
+							Inner Content
+						</h2>
+						<p class='col s12'>Bo-slider can contain text with tags h1,h2,h3,h4,h5,p</p>
+						<div class="col s12">
+							<div class='bo-slider second-slider'>
+								<ul class='bo-content' style="">
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="wrapper-header col s12">
+							HTML code
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code>&lt;div class='bo-slider'&gt;
+		&lt;ul class='bo-content'&gt;
+			&lt;li class='bo-each' style='background-image:url("resources/1.jpg")'&gt;
+				&lt;div&gt;
+					&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+					&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("resources/2.jpg")'&gt;
+				&lt;div&gt;
+					&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+					&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("resources/3.jpg")'&gt;
+				&lt;div&gt;
+					&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+					&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("resources/4.jpg")'&gt;
+				&lt;div&gt;
+					&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+					&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt; </code></pre>
+						</div>
+						<div class="wrapper-header col s12">
+							Jquery Code
+						</h4>
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code>$('.bo-slider').boslider();</code></pre>
+						</div>
+						<h3 class="col s12">Typography</h3>
+						<p class="col s12">
+							Inner contents have own typography. Below examples and table are well explain how it appear.
+						</p>
+						<div class="col s12 wrapper-header">
+							Examples
+						</div>
+						<div class="col s12 content-wrapper bo-example-typo">
+							<h1 style="color:#000;">&lt;h1&gt; Header Tag</h1>
+							<h2>&lt;h2&gt; Header Tag</h2>
+							<h3 style=''>&lt;h3&gt; Header Tag</h3>
+							<h4>&lt;h4&gt; Header Tag</h4>
+							<h5>&lt;h5&gt; Header Tag</h5>
+							<p>&lt;p&gt; Description Tag</p>
+						</div>
+						<table class='responsive-table bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Width
+									</th>
+									<th>
+										h1
+									</th>
+									<th>
+										h2
+									</th>
+									<th>
+										h3
+									</th>
+									<th>
+										h4
+									</th>
+									<th>
+										h5
+									</th>
+									<th>
+										p
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<th>
+									~679px
+									</th>
+									<th>
+										30px
+									</th>
+									<th>
+										25px
+									</th>
+									<th>
+										20px
+									</th>
+									<th>
+										15px
+									</th>
+									<th>
+										10px
+									</th>
+									<th>
+										9px
+									</th>
+								</tr>
+								<tr>
+									<th>
+										680px~1179px
+									</th>
+									<th>
+										45px
+									</th>
+									<th>
+										40px
+									</th>
+									<th>
+										35px
+									</th>
+									<th>
+										30px
+									</th>
+									<th>
+										25px
+									</th>
+									<th>
+										18px
+									</th>
+								</tr>
+								<tr>
+									<th>
+										1180px~
+									</th>
+									<th>
+										45px
+									</th>
+									<th>
+										40px
+									</th>
+									<th>
+										35px
+									</th>
+									<th>
+										30px
+									</th>
+									<th>
+										25px
+									</th>
+									<th>
+										18px
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<p class="col s12">
+							If you want to change font-family, or other properties except font-size, you can easily change opening <span class="bo-content-highlight">BOSlider.css</span> and finding Typography. Below code is what is in css file about typography. But If you  want to change font-size, then you should set parameter 'Reactivity' as 'false', then you just need to modify <span class="bo-content-highlight">BOSlider.css</span> . This will be refered later at the part of javascript.
+						</p>
+						<div class="col s12 wrapper-header">
+							CSS
+						</div>
+						<div class="col s12 content-wrapper">
+							<pre><code class="css">/*Typography*/
+		.bo-each h1{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+			transition:1000ms;
+			font-weight:100;
+			margin:5px;
+			font-family:sans-serif;
+			width:100%;
+		}
+		.bo-each h2{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+			transition:1000ms;
+			font-weight:100;
+			margin:5px;
+			font-family:sans-serif;
+			width:100%;
+		}
+		.bo-each h3{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+			transition:1000ms;
+			font-weight:100;
+			margin:5px;
+			font-family:sans-serif;
+			width:100%;
+		}
+		.bo-each h4{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+			transition:1000ms;
+			font-weight:100;
+			margin:5px;
+			font-family:sans-serif;
+			width:100%;
+		}
+		.bo-each h5{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+			transition:1000ms;
+			font-weight:100;
+			margin:5px;
+			font-family:sans-serif;
+			width:100%;
+		}
+		.bo-each p{
+			text-shadow:0 2px 2px rgba(0, 0, 0, 0.1);
+			transition:1400ms;
+			font-weight:300;
+			margin:5px;
+			font-size:18px;
+			font-family:gothic;
+			position:relative;
+			width:100%;
+		}
+	@media screen and (max-width: 679px) {
+		.bo-each{
+			text-align: center;
+		}
+		.bo-each h1{
+			font-size:30px;
+		}
+		.bo-each h2{
+			font-size:25px;
+		}
+		.bo-each h3{
+			font-size:20px;
+		}
+		.bo-each h4{
+			font-size:15px;
+		}
+		.bo-each h5{
+			font-size:10px;
+		}
+		.bo-each p{
+			font-size:9px;
+		}
+	}
+	@media screen and (min-width: 680px) and (max-width: 1179px) {
+		.bo-each h1{
+			font-size:45px;
+		}
+		.bo-each h2{
+			font-size:40px;
+		}
+		.bo-each h3{
+			font-size:35px;
+		}
+		.bo-each h4{
+			font-size:30px;
+		}
+		.bo-each h5{
+			font-size:25px;
+		}
+		.bo-each p{
+			font-size:18px;
+		}
+	}
+	@media screen and (min-width: 1180px) {
+		.bo-each{
+			text-align: center;
+		}
+		.bo-each h1{
+			font-size:45px;
+		}
+		.bo-each h2{
+			font-size:40px;
+		}
+		.bo-each h3{
+			font-size:35px;
+		}
+		.bo-each h4{
+			font-size:30px;
+		}
+		.bo-each h5{
+			font-size:25px;
+		}
+		.bo-each p{
+			font-size:18px;
+		}
+	}</code></pre>
+						</div>
+						<div class="col s12 content-warning">
+							I'm not recommand to change css. We will cover how to change css rules by using jquery later. I just want to refer that css can be changed by modifing css file.
+						</div>
+
+					</div><!--Inner Content Section-->
+					<div class="col s12 scrollspy section" id="ComponantButton">
+						<h3 class="col s12">Button</h3>
+						<p class="col s12">There are two types of button. One is <span class="bo-content-highlight">sharp type</span> , and other is <span class="bo-content-highlight">soft type</span> . Default button type is <span class="bo-content-highlight">sharp type</span> , but you don't know this right now. I'll refer later.</p>
+						<div class='col s12'>
+							<div class='bo-slider third-slider'>
+								<ul class='bo-content' style="">
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+											<a href="#" class="bo-button-soft">
+												soft type
+											</a>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+											<a href="#" class="bo-button-sharp">
+												sharp type
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="wrapper-header col s12">
+							HTML Code
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code>&lt;div class='bo-slider'&gt;
+	&lt;ul class='bo-content'&gt;
+		&lt;li class='bo-each' style='background-image:url("resources/1.jpg")'&gt;
+			&lt;div&gt;
+				&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+				&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;a href="#" class="bo-button-soft"&gt;
+					soft type
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+		&lt;li class='bo-each' style='background-image:url("resources/2.jpg")'&gt;
+			&lt;div&gt;
+				&lt;h1>Lorem ipsum dolor sit amet&lt;/h1&gt;
+				&lt;p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus&lt;/p&gt;
+				&lt;a href="#" class="bo-button-sharp"&gt;
+					sharp type
+				&lt;/a&gt;
+			&lt;/div&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt; </code></pre>
+						</div>
+					</div><!--Componant Button section-->
+					<h1 class='col s12'>JavaScript</h1>
+					<hr>
+					<div class='col s12 scrollspy section' id='Size'>
+						<h2 class='col s12'>Size</h2>
+						<p class='col s12'>You can easily change height by setting a <span class='bo-content-highlight'>Height</span> boslider method's parameter. Furthermore you can use both ratio and pixel value. Following examples explain how it works.</p>
+
+						<div class="col s12" style='margin-top:15px'>
+							<div class='bo-slider fourth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="wrapper-header col s12">
+							HTML code
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code class='html'>&lt;div class='bo-slider'&gt;
+		&lt;ul class='bo-content'&gt;
+			&lt;li class='bo-each' style='background-image:url("image1.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image2.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image3.jpg")'&gt;&lt;/li&gt;
+			&lt;li class='bo-each' style='background-image:url("image4.jpg")'&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;</code></pre>
+						</div>
+						<div class="wrapper-header col s12">
+							Jquery Code
+						</h4>
+						</div>
+						<div class="content-wrapper col s12">
+							<pre><code class='jquery'>$('.bo-slider').boslider({
+	Height : "3:2"//If you want to send px value, "'value'px".
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Minimum, Maximum Height</h4>
+						<p class='col s12'>It hard to cover all of device with only ratio setting. Therefore BOSlider provide minimum and maximum height setting. If result value of calculation is smaller(bigger) than min(max) value, height will be min value. Parameters are each <span class='bo-content-highlight'>Min_Height</span> and <span class ='bo-content-highlight'>Max_Height</span>.
+						<p class='content-warning col s12'>Type of Min_Height and Max_Height is just int, so you don't need to write 'px' unit. If you so, it don't work. </p>
+						<h5 class='col s12'>Usage</h5>
+						<div class='wrapper-header col s12'>
+							Example
+						</div>
+						<div class='content-wrapper col s12'>
+							<pre><code>$('.other').boslider({
+	Min_Height : 250,
+	Max_Height : 700,
+);</code></pre>
+						</div>
+
+						<h4 class='responsive-table col s12'>Parameter</h4>
+						<table class='centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Parameter
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Height
+									</th>
+									<th style='text-align:center;'>
+										Pixel,Ratio
+									</th>
+									<th style='text-align:center;'>
+										150px , 2:1
+									</th>
+									<th style='text-align:center;'>
+										2:1
+									</th>
+									<th style='text-align:center;'>
+										String
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Min_Height
+									</th>
+									<th style='text-align:center;'>
+										Pixel
+									</th>
+									<th style='text-align:center;'>
+										160
+									</th>
+									<th style='text-align:center;'>
+										0
+									</th>
+									<th style='text-align:center;'>
+										Int
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Max_Height
+									</th>
+									<th style='text-align:center;'>
+										Pixel
+									</th>
+									<th style='text-align:center;'>
+										700
+									</th>
+									<th style='text-align:center;'>
+										1920
+									</th>
+									<th style='text-align:center;'>
+										Int
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Size section-->
+					<div class='col s12 scrollspy' id='ContentHeight'>
+						<h2 class='col s12'>Content Height</h2>
+						<p>What if position of inner content is quite weird? Oh, I don't want to imagine. So there are the function that modify the height of inner content. You can use both ratio and pixel.</p>
+						<div class='col s12'>
+							<div class='bo-slider eleventh-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Content : {
+		1 : "1/4",
+	}
+});</code></pre>
+							<div class='col s12 wrapper-header'>
+								Calculation (Ratio)
+							</div>
+							<div class='col s12 content-wrapper'>
+								<pre><code>div(padding-top) = $(this).Height()*(numerator)/(denominator)px</code></pre>
+							</div>
+							<div class='col s12 wrapper-header'>
+								Calculation (Pixel)
+							</div>
+							<div class='col s12 content-wrapper'>
+								<pre><code>div(padding-top) = (value)px</code></pre>
+							</div>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Number of Slider
+									</th>
+									<th style='text-align:center;'>
+										Ratio , Pixel
+									</th>
+									<th style='text-align:center;'>
+										1/2 , 150px
+									</th>
+									<th style='text-align:center;'>
+										1/2.5 (Slide Num : All slide)
+									</th>
+									<th style='text-align:center;'>
+										String
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Content Height section-->
+					<div class='col s12 section scrollspy' id='SideMover'>
+						<h2 class='col s12'>Side Mover</h2>
+						<p>Button that move slide to left, or right. Default value is false, so if you want to add Mover, you need to send parameter Mover.On as true.</p>
+						<div class='col s12'>
+							<div class='bo-slider fifth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Mover : {
+		On : true,
+	},
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Click Section</h4>
+						<p class='col s12'>You can also modify the clickable section's width. Parameter is Mover.Width.</p>
+						<div class='col s12'>
+							<div class='bo-slider sixth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Mover : {
+		On : true,
+		Width : 35,
+	},
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Gradation</h4>
+						<p class='col s12'>Yes, I know there are people who will hate gradation. So there is option for gradation named Mover.Gradient.</p>
+						<div class='col s12'>
+							<div class='bo-slider seventh-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Mover : {
+		On : true,
+		Width : 35,
+		Gradient : false,
+	},
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Parameter
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										On
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										true , false
+									</th>
+									<th style='text-align:center;'>
+										false
+									</th>
+									<th style='text-align:center;'>
+										Boolean
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Width
+									</th>
+									<th style='text-align:center;'>
+										px
+									</th>
+									<th style='text-align:center;'>
+										40
+									</th>
+									<th style='text-align:center;'>
+										20px
+									</th>
+									<th style='text-align:center;'>
+										int
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Gradient
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										true , false
+									</th>
+									<th style='text-align:center;'>
+										true
+									</th>
+									<th style='text-align:center;'>
+										Boolean
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Side Mover section-->
+					<div class='col s12 scrollspy' id='Navigation'>
+						<h2 class='col s12'>Navigation</h2>
+						<p>As you know, Default value of Navigation is to show. Parameter is <span class='bo-content-highlight'>Nav.On</span> . But if you don't want it, then set the Nav.On as false. It will be disappear.</p>
+						<div class='col s12'>
+							<div class='bo-slider eighth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Mover : {
+		On : true,
+	},
+	Nav : {
+		On : false,	
+	},
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										On
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										true , false
+									</th>
+									<th style='text-align:center;'>
+										true
+									</th>
+									<th style='text-align:center;'>
+										Boolean
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Shape
+									</th>
+									<th style='text-align:center;'>
+										Note Developed
+									</th>
+									<th style='text-align:center;'>
+										Note Developed
+									</th>
+									<th style='text-align:center;'>
+										Note Developed
+									</th>
+									<th style='text-align:center;'>
+										Note Developed
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Navigation section-->
+					<div class='col s12 scrollspy' id='AutoSlide'>
+						<h2 class='col s12'>Slide Automatically</h2>
+						<p>Setting parameter <span class='bo-content-highlight'>AutoSlide.On</span> as true will make slide move automatically. And slide interval time can be setted by parameter <span class='bo-content-highlight'>AutoSlide.Duration</span> .</p>
+						<div class='col s12'>
+							<div class='bo-slider nineth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Mover : {
+		On : true,
+	},
+	Nav : {
+		On : false,	
+	},
+	AutoSlide { 
+		On : true,
+		Duration : 5000,
+	},
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										On
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										true , false
+									</th>
+									<th style='text-align:center;'>
+										true
+									</th>
+									<th style='text-align:center;'>
+										Boolean
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Duration
+									</th>
+									<th style='text-align:center;'>
+										ms
+									</th>
+									<th style='text-align:center;'>
+										4000
+									</th>
+									<th style='text-align:center;'>
+										5000
+									</th>
+									<th style='text-align:center;'>
+										Int
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--AutoSlide section-->
+					<div class='col s12 scrollspy' id='Reactivity'>
+						<h2 class='col s12'>Reactivity</h2>
+						<p>BOSlider componant react following the parent's width. But If you don't want this (I mean, you have wonderful plan for designing your own slide), then turn it off and make your own world!</p>
+						<div class='col s12'>
+							<div class='bo-slider tenth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+										<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+										<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+										<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+										<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+										<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+										<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+										<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	Reactivity : false,
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Reactivity
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										true , false
+									</th>
+									<th style='text-align:center;'>
+										true
+									</th>
+									<th style='text-align:center;'>
+										Boolean
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Reactivity section-->
+					<div class='col s12 scrollspy' id='ButtonChanger'>
+						<h2 class='col s12'>Button Changer</h2>
+						<p class='col s12'>If you want to change button, why don't you use this? not just change using CSS, you can change every css using this method. There are some CSS properties that can't change only using a CSS because of reactivity. (but if you set <span class='bo-content-highlight'>Reactivity</span> as false, then you can.)</p>
+						<div class='col s12'>
+							<div class='bo-slider twelveth-slider'>
+								<ul class='bo-content' style="">
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+											<a href="#" class="bo-button-soft">
+												soft type
+											</a>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+											<a href="#" class="bo-button-sharp">
+												sharp type
+											</a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code>$('.bo-slider').boslider({
+	}).boButton({
+		'background-color' : 'rgba(160,160,160,0.4)',
+		'color' : '#aaa',
+	}).boButton({
+		'background-color' : 'rgba(160,144,120,0.8)',
+		'color' : '#fff',
+	},{
+		Which : 'soft',
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<p class='col s12'><span class='bo-content-highlight'>boButton</span> method need two parameters. First one is CSS rule and second is other properties.</p>
+						<div class='col s12 wrapper-header'>
+							Example
+						</div>
+						<div class='col s12 content-wrapper'>
+							<pre><code class='javascript'>$.fn.boButton = function(CSS_rule,other_properties){
+	CSS_rule : {
+		'CSS_properties' : 'value',//no matter how many properties are, they all be applied. 
+	},other_properties : {
+		Page : [All page], // the page number that above css rules are applied. data type is integer array.
+		Which : 'sharp', //the button that above css rules are applied. Either 'sharp' or 'soft'.
+		Min_Height : 0, //If height of this slider is smaller than Min_Height value, than css rules will be ignored.
+		Max_Height : 10000, //If height of this slider is bigger than Max_Height value, than css rules will be ignored.
+	}
+}</code></pre>
+						</div>
+						<h5 class='col s12'>CSS Rule</h5>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Name of Property
+									</th>
+									<th style='text-align:center;'>
+										unit of css value
+									</th>
+									<th style='text-align:center;'>
+										css value
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										String
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<h5 class='col s12'>Other properties</h5>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Name
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+
+							<tbody class=''>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Page
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										[1,3]
+									</th>
+									<th style='text-align:center;'>
+										All page
+									</th>
+									<th style='text-align:center;'>
+										Array
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Which
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										soft or sharp
+									</th>
+									<th style='text-align:center;'>
+										sharp
+									</th>
+									<th style='text-align:center;'>
+										String
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Min_Height
+									</th>
+									<th style='text-align:center;'>
+										pixel
+									</th>
+									<th style='text-align:center;'>
+										300
+									</th>
+									<th style='text-align:center;'>
+										0
+									</th>
+									<th style='text-align:center;'>
+										Int
+									</th>
+								</tr>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Max_Height
+									</th>
+									<th style='text-align:center;'>
+										pixel
+									</th>
+									<th style='text-align:center;'>
+										800
+									</th>
+									<th style='text-align:center;'>
+										10000
+									</th>
+									<th style='text-align:center;'>
+										Int
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Button Changer section-->
+					<div class='col s12 scrollspy' id='ContentChanger'>
+						<h2 class='col s12'>Contents Changer</h2>
+						<p class='col s12'>Here is quite powerful method (yes, just my opinion). If you want to change CSS properties while <span class='bo-content-highlight'>Reactivity</span> setting is on, then <span class='bo-content-highlight'>boTypo</span> method will help you.</p>
+						<div class='col s12'>
+							<div class='bo-slider thirteenth-slider'>
+								<ul class='bo-content' style="">
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+										<div>
+											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class='col s12 wrapper-header'>
+								Jquery Code
+							</div>
+							<div class='col s12 content-wrapper'>
+								<pre><code>$('.bo-slider').boslider()
+	.boTypo({
+		'color' : 'rgba(255,255,255,0.7):[500|600]',
+		'font-weight' : '600',
+	},{
+		Page : [1],
+	})
+	.boTypo({
+		'color' : 'rgba(140,160,180,0.8)',
+		'font-weight' : '400',
+		'font-size' : '1em',
+	},{
+		Page : [2],
+		Whidch : ['p'],
+});</code></pre>
+							</div>
+							<h4 class='col s12'>Parameter</h4>
+							<p class='col s12'><span class='bo-content-highlight'>boTypo</span> method need two parameter. First is CSS Rule and second one is other properties. Belows are more details.</p>
+							<div class='col s12 wrapper-header'>
+								Example
+							</div>
+							<div class='col s12 content-wrapper'>
+<pre><code class='javascript'>$.fn.boTypo = function(CSS_rule,other_properties){
+	CSS_rule : {
+		'CSS_properties' : 'value:[MinWidth|MaxWidth]',//no matter how many properties are, they all be applied. 
+		//MinWidth - If width of this slider is smaller than MinWidth value, than css rules will be ignored.
+		//MaxWidth - If width of this slider is bigger than MaxWidth value, than css rules will be ignored.
+		//If you don't need restriction, just enter value
+	},other_properties : {
+		Page : [All page], // the page number that above css rules are applied. data type is integer array.
+		Which : ['h1','h2','h3','h4','h5','p'], //the tag,class,id that above css rules are applied. It can be everything in div tag
+	}
+}</code></pre>
+							</div>
+						</div>
+					</div><!--Content Changer section-->
+				</div>
+				<div class="col hide-on-small-only m2 l2">
+				<ul class="section table-of-contents">
+					<li>
+						<div class="col s12">
+							시작하기
+						</div>
+					</li>
+					<li>
+						<a href="#Installation" class="col s12">
+							설치
+						</a>
+					</li>
+					<li>
+						<a href="#HTMLSchema" class="col s12">
+							HTML 구조
+						</a>
+					</li>
+					<li>
+						<div class="col s12">
+							구성요소
+						</div>
+					</li>
+					<li>
+						<a href="#StandardContent" class="col s12">
+							기본 컨텐츠
+						</a>
+					</li>
+					<li>
+						<a href="#InnerContent" class="col s12">
+							내부 요소
+						</a>
+					</li>
+					<li>
+						<a href="#ComponantButton" class="col s12">
+							버튼
+						</a>
+					</li>
+					<li>
+						<div class="col s12">
+							자바스크립트
+						</div>
+					</li>
+					<li>
+						<a href="#Size" class="col s12">
+							크기
+						</a>
+					</li>
+					<li>
+						<a href="#ContentHeight" class="col s12">
+							컨텐츠 높이
+						</a>
+					</li>
+
+					<li>
+						<a href="#SideMover" class="col s12">
+							옆슬라이드 보기
+						</a>
+					</li>
+					<li>
+						<a href="#Navigation" class="col s12">
+							네비게이션
+						</a>
+					</li>
+					<li>
+						<a href="#AutoSlide" class="col s12">
+							자동슬라이드
+						</a>
+					</li>
+					<li>
+						<a href="#Reactivity" class="col s12">
+							반응성
+						</a>
+					</li>
+					<li>
+						<a href="#ButtonChanger" class="col s12">
+							버튼 수정 메소드
+						</a>
+					</li>
+					<li>
+						<a href="#ContentChanger" class="col s12">
+							컨텐츠 수정 메소드
+						</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</BODY>
+	<!--Jquery CDN-->
+	<script src='js/jquery.js'></script>
+
+	<!--Javascript CDN-->
+	<script src='js/BOSlider.js'></script>
+	<script src='js/materialize.js'></script> 
+	<script src='js/Page.js'></script>
+	<script src="js/highlight.pack.js"></script>
+	<script src='js/semantic.js'></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<script>
+	$(document).on('ready',function(){
+		$('.first-slider').boslider();
+		$('.second-slider').boslider();
+		$('.third-slider').boslider();
+		$('.fourth-slider').boslider({
+			Height : '3:2'
+		});
+		$('.fifth-slider').boslider({
+			Mover : {
+				On : true,
+			},
+		});
+		$('.sixth-slider').boslider({
+			Mover : {
+				On : true,
+				Width : 35,
+			},
+		});
+		$('.seventh-slider').boslider({
+			Mover : {
+				On : true,
+				Width : 35,
+				Gradient : false,
+			},
+		});
+		$('.eighth-slider').boslider({
+			Mover : {
+				On : true,
+			},
+			Nav : {
+				On : false
+			}
+		});
+		$('.nineth-slider').boslider({
+			Mover : {
+				On : false,
+			},
+			Nav : {
+				On : false,
+			},
+			AutoSlide : {
+				On : true,
+				Duration : 5000,
+			},
+		});
+		$('.tenth-slider').boslider({
+			Reactivity : false,
+		});
+		$('.eleventh-slider').boslider({
+			Content : {
+				1 : "1/3.5",
+			}
+		});
+	
+		$('.twelveth-slider').boslider({
+		}).boButton({
+			'background-color' : 'rgba(160,160,160,0.4)',
+			'color' : '#aaa',
+		}).boButton({
+			'background-color' : 'rgba(160,144,120,0.8)',
+			'color' : '#fff',
+		},{
+			Which : 'soft',
+		});
+
+		$('.thirteenth-slider').boslider({
+		}).boTypo({
+			'color' : 'rgba(255,255,255,0.7):[500|600]',
+			'font-weight' : '600',
+		},{
+			Page : [1],
+		}).boTypo({
+			'color' : 'rgba(140,160,180,0.8)',
+			'font-weight' : '400',
+			'font-size' : '1em',
+		},{
+			Page : [2],
+			Which : ['p'],
+		});
+
+		$('.button-collapse').sideNav();
+
+		$('.other').boslider({
+			Reactivity : false,
+			Min_Height : 250,
+			AutoSlide : false,
+			Nav : {
+				On : false,
+			},
+			Content : {
+				1:"1.6/4",
+			},
+			Height: "2:0.8",
+			Mover : false,
+		}).boButton({'background':'rgba(33,150,243,0.4)','border':'none','color':'rgba(250,250,250,0.8)'});
+		$('.table-of-contents').pushpin({ 
+			top: $('.table-of-contents').offset().top-70,
+			offset : 70,
+		 });
+		$('.scrollspy').scrollSpy();
+		
+	});
+	</script>
+</HTML>
