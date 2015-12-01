@@ -52,10 +52,13 @@
 							JavaScript
 						</div>
 						<a href="#Size" class="col s12 item">
-							Size
+							Height
 						</a>
 						<a href="#ContentHeight" class="col s12 item">
 							Content Height
+						</a>
+						<a href='#Type' class='col s12 item'>
+							Type
 						</a>
 						<a href="#SideMover" class="col s12 item">
 							Side Mover
@@ -69,9 +72,6 @@
 						<a href="#Reactivity" class="col s12 item">
 							Reactivity
 						</a>
-						<a href="#ButtonChanger" class="col s12 item">
-							Button Changer
-						</a>
 						<a href="#ContentChanger" class="col s12 item">
 							Contents Changer
 						</a>
@@ -83,8 +83,8 @@
 					<div style='background-color:#bbdefb;' class='main-typo'>
 						<h1 style='color:#fff'>BOSLIDER</h1>
 						<h3 style='color:#fff'>Make your Slide more easily.</h3>
-						<p style='color:#fff'>Version 0.8.0 Beta</p>
-						<a href="#GettingStart" id='' class="bo-button-sharp">GET STARTED</a>
+						<p style='color:#fff'>Version 0.9.0 Beta</p>
+						<a href="#GettingStart" class="bo-button-sharp">GET STARTED</a>
 					</div>
 				</li>
 			</ul>
@@ -199,25 +199,25 @@
 								<ul class='bo-content' style="">
 									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
 										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<h1 style="color: #000 !important;">1Lorem ipsum dolor sit amet</h1>
 											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
 										</div>
 									</li>
 									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
 										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<h1 style="color: #000 !important;">2Lorem ipsum dolor sit amet</h1>
 											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
 										</div>
 									</li>
 									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
 										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<h1 style="color: #000 !important;">3Lorem ipsum dolor sit amet</h1>
 											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
 										</div>
 									</li>
 									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
 										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
+											<h1 style="color: #000 !important;">4Lorem ipsum dolor sit amet</h1>
 											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
 										</div>
 									</li>
@@ -566,7 +566,7 @@
 					<h1 class='col s12'>JavaScript</h1>
 					<hr>
 					<div class='col s12 scrollspy section' id='Size'>
-						<h2 class='col s12'>Size</h2>
+						<h2 class='col s12'>Height</h2>
 						<p class='col s12'>You can easily change height by setting a <span class='bo-content-highlight'>Height</span> boslider method's parameter. Furthermore you can use both ratio and pixel value. Following examples explain how it works.</p>
 
 						<div class="col s12" style='margin-top:15px'>
@@ -782,6 +782,73 @@
 							</tbody>
 						</table>
 					</div><!--Content Height section-->
+					<div class='col s12 scrollspy' id='Type'>
+						<h2 class='col s12'>Type</h2>
+						<p class='col s12'>You can change slide type. Parameter is <span class='bo-content-highlight'>Type</span> and you can select either 'Slide' or 'Fade'. Default is Slide.</p>
+						<div class='col s12'>
+							<div class='bo-slider twelveth-slider'>
+								<ul class='bo-content'>
+									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/3.jpg")'>
+									</li>
+									<li class='bo-each' style='background-image:url("resources/4.jpg")'>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class='col s12 wrapper-header'>
+							Jquery Code
+						</div>
+						<div class='col s12 content-wrapper'>
+<pre><code>$('.bo-slider').boslider({
+	Type: 'Fade',
+});</code></pre>
+						</div>
+						<h4 class='col s12'>Parameter</h4>
+						<table class='responsive-table centered bordered col s12'>
+							<thead>
+								<tr>
+									<th>
+										Parameter
+									</th>
+									<th>
+										Unit
+									</th>
+									<th>
+										usage
+									</th>
+									<th>
+										default
+									</th>
+									<th>
+										Type
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr style='text-align:center;'>
+									<th style='text-align:center;'>
+										Type
+									</th>
+									<th style='text-align:center;'>
+										none
+									</th>
+									<th style='text-align:center;'>
+										Fade , Slide
+									</th>
+									<th style='text-align:center;'>
+										Slide
+									</th>
+									<th style='text-align:center;'>
+										String
+									</th>
+								</tr>
+							</tbody>
+						</table>
+					</div><!--Type section-->
 					<div class='col s12 section scrollspy' id='SideMover'>
 						<h2 class='col s12'>Side Mover</h2>
 						<h5 class='col s12' style='color:#aaa'>Under Construction</h5>
@@ -1202,202 +1269,6 @@
 							</tbody>
 						</table>
 					</div><!--Reactivity section-->
-					<div class='col s12 scrollspy' id='ButtonChanger'>
-						<h2 class='col s12'>Button Changer</h2>
-						<h5 class='col s12' style='color:red;'>-Removed after v0.8.0</h2>
-						<p class='col s12'>If you want to change button, why don't you use this? not just change using CSS, you can change every css using this method. There are some CSS properties that can't change only using a CSS because of reactivity. (but if you set <span class='bo-content-highlight'>Reactivity</span> as false, then you can.)</p>
-						<div class='col s12'>
-							<div class='bo-slider twelveth-slider'>
-								<ul class='bo-content' style="">
-									<li class='bo-each' style='background-image:url("resources/1.jpg")'>
-										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
-											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
-											<a href="#" class="bo-button-soft">
-												soft type
-											</a>
-										</div>
-									</li>
-									<li class='bo-each' style='background-image:url("resources/2.jpg")'>
-										<div>
-											<h1 style="color: #000 !important;">Lorem ipsum dolor sit amet</h1>
-											<p>Lorem ipsum dolor sit amet, in amet integer sed, mauris non a per et nulla lacus</p>
-											<a href="#" class="bo-button-sharp">
-												sharp type
-											</a>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class='col s12 wrapper-header'>
-							Jquery Code
-						</div>
-						<div class='col s12 content-wrapper'>
-							<pre><code>$('.bo-slider').boslider({
-	}).boButton({
-		'background-color' : 'rgba(160,160,160,0.4)',
-		'color' : '#aaa',
-	}).boButton({
-		'background-color' : 'rgba(160,144,120,0.8)',
-		'color' : '#fff',
-	},{
-		Which : 'soft',
-});</code></pre>
-						</div>
-						<h4 class='col s12'>Parameter</h4>
-						<p class='col s12'><span class='bo-content-highlight'>boButton</span> method need two parameters. First one is CSS rule and second is other properties.</p>
-						<div class='col s12 wrapper-header'>
-							Example
-						</div>
-						<div class='col s12 content-wrapper'>
-							<pre><code class='javascript'>$.fn.boButton = function(CSS_rule,other_properties){
-	CSS_rule : {
-		'CSS_properties' : 'value',//no matter how many properties are, they all be applied. 
-	},other_properties : {
-		Page : [All page], // the page number that above css rules are applied. data type is integer array.
-		Which : 'sharp', //the button that above css rules are applied. Either 'sharp' or 'soft'.
-		Min_Height : 0, //If height of this slider is smaller than Min_Height value, than css rules will be ignored.
-		Max_Height : 10000, //If height of this slider is bigger than Max_Height value, than css rules will be ignored.
-	}
-}</code></pre>
-						</div>
-						<h5 class='col s12'>CSS Rule</h5>
-						<table class='responsive-table centered bordered col s12'>
-							<thead>
-								<tr>
-									<th>
-										Name
-									</th>
-									<th>
-										Unit
-									</th>
-									<th>
-										usage
-									</th>
-									<th>
-										default
-									</th>
-									<th>
-										Type
-									</th>
-								</tr>
-							</thead>
-
-							<tbody>
-								<tr style='text-align:center;'>
-									<th style='text-align:center;'>
-										Name of Property
-									</th>
-									<th style='text-align:center;'>
-										unit of css value
-									</th>
-									<th style='text-align:center;'>
-										css value
-									</th>
-									<th style='text-align:center;'>
-										none
-									</th>
-									<th style='text-align:center;'>
-										String
-									</th>
-								</tr>
-							</tbody>
-						</table>
-						<h5 class='col s12'>Other properties</h5>
-						<table class='responsive-table centered bordered col s12'>
-							<thead>
-								<tr>
-									<th>
-										Name
-									</th>
-									<th>
-										Unit
-									</th>
-									<th>
-										usage
-									</th>
-									<th>
-										default
-									</th>
-									<th>
-										Type
-									</th>
-								</tr>
-							</thead>
-
-							<tbody class=''>
-								<tr style='text-align:center;'>
-									<th style='text-align:center;'>
-										Page
-									</th>
-									<th style='text-align:center;'>
-										none
-									</th>
-									<th style='text-align:center;'>
-										[1,3]
-									</th>
-									<th style='text-align:center;'>
-										All page
-									</th>
-									<th style='text-align:center;'>
-										Array
-									</th>
-								</tr>
-								<tr style='text-align:center;'>
-									<th style='text-align:center;'>
-										Which
-									</th>
-									<th style='text-align:center;'>
-										none
-									</th>
-									<th style='text-align:center;'>
-										soft or sharp
-									</th>
-									<th style='text-align:center;'>
-										sharp
-									</th>
-									<th style='text-align:center;'>
-										String
-									</th>
-								</tr>
-								<tr style='text-align:center;'>
-									<th style='text-align:center;'>
-										Min_Height
-									</th>
-									<th style='text-align:center;'>
-										pixel
-									</th>
-									<th style='text-align:center;'>
-										300
-									</th>
-									<th style='text-align:center;'>
-										0
-									</th>
-									<th style='text-align:center;'>
-										Int
-									</th>
-								</tr>
-								<tr style='text-align:center;'>
-									<th style='text-align:center;'>
-										Max_Height
-									</th>
-									<th style='text-align:center;'>
-										pixel
-									</th>
-									<th style='text-align:center;'>
-										800
-									</th>
-									<th style='text-align:center;'>
-										10000
-									</th>
-									<th style='text-align:center;'>
-										Int
-									</th>
-								</tr>
-							</tbody>
-						</table>
-					</div><!--Button Changer section-->
 					<div class='col s12 scrollspy' id='ContentChanger'>
 						<h2 class='col s12'>Contents Changer</h2>
 						<p class='col s12'>Here is quite powerful method (yes, just my opinion). If you want to change CSS properties while <span class='bo-content-highlight'>Reactivity</span> setting is on, then <span class='bo-content-highlight'>boTypo</span> method will help you.</p>
@@ -1503,7 +1374,7 @@
 					</li>
 					<li>
 						<a href="#Size" class="col s12">
-							Size
+							Height
 						</a>
 					</li>
 					<li>
@@ -1511,7 +1382,11 @@
 							Content Height
 						</a>
 					</li>
-
+					<li>
+						<a href="#Type" class="col s12">
+							Type
+						</a>
+					</li>
 					<li>
 						<a href="#SideMover" class="col s12">
 							Side Mover
@@ -1530,11 +1405,6 @@
 					<li>
 						<a href="#Reactivity" class="col s12">
 							Reactivity
-						</a>
-					</li>
-					<li>
-						<a href="#ButtonChanger" class="col s12">
-							Button Changer
 						</a>
 					</li>
 					<li>
@@ -1641,14 +1511,7 @@
 		});
 	
 		$('.twelveth-slider').boslider({
-		}).boButton({
-			'background-color' : 'rgba(160,160,160,0.4)',
-			'color' : '#aaa',
-		}).boButton({
-			'background-color' : 'rgba(160,144,120,0.8)',
-			'color' : '#fff',
-		},{
-			Which : 'soft',
+			Type : 'Fade',
 		});
 
 		$('.thirteenth-slider').boslider({
@@ -1669,6 +1532,7 @@
 		$('.button-collapse').sideNav();
 
 		$('.other').boslider({
+			Type:'Fade',
 			Reactivity : false,
 			Min_Height : 300,
 			AutoSlide : false,
@@ -1680,10 +1544,12 @@
 			},
 			Height: "2:0.8",
 			Mover : false,
-		}).boButton({
+		}).boTypo({
 			'background':'rgba(33,150,243,0.4)',
 			'border':'none',
-			'color':'rgba(250,250,250,0.8)'
+			'color':'rgba(250,250,250,0.8)',
+		},{
+			Which : ['.bo-button-sharp']
 		}).boTypo({
 		 	'color' : '#fff',
 		 	'font-weight' : '400',
