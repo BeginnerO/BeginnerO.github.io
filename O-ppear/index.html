@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>
+        O-ppear
+    </title>
+
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="css/semantic.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600,700,900|Oxygen:400,300,700|Josefin+Slab:400,600,700,300,100' rel='stylesheet' type='text/css'>
+</head>
+<body style="height:1700px;">
+<div class="left-fixed type3">
+    <a class="main-button" href="O-ppear_1.0.0.zip" download>
+        Download.zip
+    </a>
+    <div class="main-empty-button">
+        View on Github
+    </div>
+</div>
+<div class="ui centered grid container">
+    <div class="sixteen wide column">
+        <h1 class="hero-title type1">
+            O-ppear
+        </h1>
+        <h2 class="hero-sub type2">
+            V 1.0.0
+        </h2>
+    </div>
+    <div class="ten wide computer column ten wide tablet column sixteen wide mobile column">
+        <h3 class="h3-header">
+            What is O-ppear?
+        </h3>
+        <p class="p-content">
+            O-ppear is animator detecting window scroll. You can check what is O-ppear clearly seeing below example. It is quiet easy to use.
+        </p>
+        <h3 class="h3-header">
+            Quick Start
+        </h3>
+        <p class="p-content">
+            Import jQuery and O-ppear.
+        </p>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>&lt;/script>
+&lt;script src='O-ppear.js'>&lt;/script></code></pre>
+        </div>
+        <p class="p-content">
+            And just register class at the DOM selector.
+        </p>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;div class='example1'>this is exmaple&lt;/div></code></pre>
+        </div>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.example1').Oppear();
+&lt;/script>
+</code></pre>
+        </div>
+        <div class="example1 exampleBox">
+            this is example
+        </div>
+        <h3 class="h3-header">
+            Multiple Assignment
+        </h3>
+        <p class="p-content">
+            You don't need to make several same code. just make one line, and type that DOM. Please below example.
+        </p>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;div class='example1'>this is example.&lt;/div>
+&lt;div class='example1'>this is other example.&lt;/div></code></pre>
+        </div>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.example1').Oppear();
+&lt;/script></code></pre>
+        </div>
+        <div class="example1 exampleBox">
+            this is example.
+        </div>
+        <div class="example1 exampleBox">
+            this is other example.
+        </div>
+        <h3 class="h3-header">
+            Offset
+        </h3>
+        <p class="p-content">
+            You can make to appear DOM content not at the end of window, you can modify the height that will DOM content will appear.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>offset</td>
+                <td>Int</td>
+                <td>0</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.example2').Oppear({
+        offset : 150,
+    });
+&lt;/script></code></pre>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    this is normal example.
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox example2">
+                    this is '150 offset setted' example.
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Appearance Direction
+        </h3>
+        <p class="p-content">
+            You can set direction of appearance.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+                <th>Usage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>direction</td>
+                <td>String</td>
+                <td>Up</td>
+                <td>up,right,down,left</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+                $('.up-example').Oppear({
+                direction : 'up'
+                });
+                $('.right-example').Oppear({
+                direction : 'right'
+                });
+                $('.down-example').Oppear({
+                direction : 'down'
+                });
+                $('.left-example').Oppear({
+                direction : 'left'
+                });
+                &lt;/script></code></pre>
+        </div>
+        <div class="ui four column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    up
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox right-example">
+                    right
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox down-example">
+                    down
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox left-example">
+                    left
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Slide Distance
+        </h3>
+        <p class="p-content">
+            And also you can change slide distance.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+                <th>Usage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>distance</td>
+                <td>String</td>
+                <td>50px</td>
+                <td>10px,100px</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+                $('.distance-example').Oppear({
+                    distance : '100px',
+                });
+                &lt;/script></code></pre>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    Normal
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox distance-example">
+                    100px distance
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Transition
+        </h3>
+        <p class="p-content">
+            You don't want a speed that DOM appear? Then change it!
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+                <th>Usage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>transition</td>
+                <td>String</td>
+                <td>2s</td>
+                <td>1s,500ms</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.transition-example').Oppear({
+        transition : '0.5s',
+    });
+&lt;/script></code></pre>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    Normal
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox transition-example">
+                    0.5s transition
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Delay
+        </h3>
+        <p class="p-content">
+            If you want to let appear later, then set the delay.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+                <th>Usage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>delay</td>
+                <td>Int</td>
+                <td>0</td>
+                <td>100,5000</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.delay-example').Oppear({
+        delay : 500,
+    });
+&lt;/script></code></pre>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    Normal
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox delay-example">
+                    500 delay
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Disappearance
+        </h3>
+        <p class="p-content">
+            If Disappear is true, then content will disappear when DOM content isn't in window. The very first main title is one of example. And the DOM content is in window again, then it will appear again.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+                <th>Usage</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>disappear</td>
+                <td>boolean</td>
+                <td>false</td>
+                <td>true,false</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.disappear-example').Oppear({
+        disappear : true
+    });
+&lt;/script></code></pre>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <div class="exampleBox example1">
+                    Normal
+                </div>
+            </div>
+            <div class="column">
+                <div class="exampleBox disappear-example">
+                    Disappear
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-header">
+            Appearance Condition
+        </h3>
+        <p class="p-content">
+            If you want to appear at other condition, then you can set the condition. Left side download menu is one of example.
+        </p>
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>appearCondition</td>
+                <td>function</td>
+                <td>Please see below</td>
+            </tr>
+            </tbody>
+        </table>
+        <h4 class="h4-header">
+            Default function
+        </h4>
+        <div class="code-box">
+            <pre><code class="language-javascript">function(OppPosition,options){
+    if($(document).scrollTop() + $(window).height() + options.offset >= OppPosition
+        && $(document).scrollTop() + options.offset <= OppPosition){
+        return true;
+    }else{
+        return false;
+}</code></pre>
+        </div>
+        <p class="warningBox">
+            If you return true, then content will appear and return false, content will disappear. OppPosition parameter is position of dom content, and options is parameter that you set at Oppear method.
+        </p>
+    </div><!--UI CENTERED GRID-->
+
+</div><!--UI CONTAINER-->
+</body>
+<footer>
+    <!--JQuery-->
+    <script src="js/jQuery.js"></script>
+    <!--JAVASCRIPT Plugin-->
+    <script src="js/semantic.js"></script>
+    <script src="js/Oppear_1.0.0.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        $('.type1').Oppear({
+            transition : '1s ease-out',
+            direction : 'right',
+            disappear : true,
+            offset : -1,
+        },{
+        });
+        $('.type2').Oppear({
+            delay : 100,
+            transition : '2s',
+            disappear : true,
+            offset : 150,
+        },{
+            'font-size' : '3.5rem',
+        });
+        if($(document).width() < 640){
+            $('.type3').Oppear({
+                defaultCSS: false,
+                disappear: true,
+                transition: '1s ease ',
+                appearCondition: function (OppPosition, options) {
+                    if ($(window).scrollTop() >= 10) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+            }, {
+                'left': '5%',
+            });
+        }else {
+            $('.type3').Oppear({
+                defaultCSS: false,
+                disappear: true,
+                transition: '0.5s ease ',
+                appearCondition: function (OppPosition, options) {
+                    if ($(window).scrollTop() >= 10) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                },
+            }, {
+                'left': '3%',
+            });
+        }
+        $('.example1').Oppear();
+        $('.example2').Oppear({
+            offset : 150,
+        });
+        $('.right-example').Oppear({
+            direction : 'right',
+        })
+        $('.down-example').Oppear({
+            direction : 'down',
+        })
+        $('.left-example').Oppear({
+            direction : 'left',
+        })
+        $('.transition-example').Oppear({
+            transition : '0.5s',
+        })
+        $('.delay-example').Oppear({
+            delay : 500,
+        })
+        $('.distance-example').Oppear({
+            distance : '100px',
+        });
+        $('.disappear-example').Oppear({
+            disappear : true,
+        });
+
+    </script>
+</footer>
+</html>
