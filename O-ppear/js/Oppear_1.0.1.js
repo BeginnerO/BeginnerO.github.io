@@ -1,4 +1,4 @@
-/*O-ppear 1.0.0
+/*O-ppear 1.0.1
  *
  *
  *Copyright (C) 2015 BeginnerO
@@ -58,7 +58,6 @@
                         defCSS['transform'] = direction[options.direction];
                     }
                     if(options.disappear){
-                        console.log(defCSS);
                         /*defCSS = $Opp.getAllCSS();
                         defCSS = getOriginalCSS(defCSS);*/
                         for(var property in defCSS){
@@ -70,7 +69,6 @@
 
                 setTimeout(function(){
                     var OppPosition = $Opp.offset().top;
-                    console.log(OppPosition);
                     var appearance = false;
                     $(document).scroll(function(){
 
@@ -113,7 +111,7 @@
                     if(!aBitSlide) {
                         $('html,body').animate({scrollTop: $(document).scrollTop() + 1}, 1);
                         $('html,body').animate({scrollTop: $(document).scrollTop()}, 1);
-                        aBitSlide = true;g
+                        aBitSlide = true;
                     }
                 },options.delay);
             });
