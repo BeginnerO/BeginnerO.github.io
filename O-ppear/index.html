@@ -151,19 +151,19 @@
         </table>
         <div class="code-box">
             <pre><code class="language-html">&lt;script src='jQuery.js'>
-                $('.up-example').Oppear({
-                direction : 'up'
-                });
-                $('.right-example').Oppear({
-                direction : 'right'
-                });
-                $('.down-example').Oppear({
-                direction : 'down'
-                });
-                $('.left-example').Oppear({
-                direction : 'left'
-                });
-                &lt;/script></code></pre>
+    $('.up-example').Oppear({
+        direction : 'up'
+    });
+    $('.right-example').Oppear({
+        direction : 'right'
+    });
+    $('.down-example').Oppear({
+        direction : 'down'
+    });
+    $('.left-example').Oppear({
+        direction : 'left'
+    });
+&lt;/script></code></pre>
         </div>
         <div class="ui four column grid">
             <div class="column">
@@ -213,10 +213,10 @@
         </table>
         <div class="code-box">
             <pre><code class="language-html">&lt;script src='jQuery.js'>
-                $('.distance-example').Oppear({
-                    distance : '100px',
-                });
-                &lt;/script></code></pre>
+    $('.distance-example').Oppear({
+        distance : '100px',
+    });
+&lt;/script></code></pre>
         </div>
         <div class="ui two column grid">
             <div class="column">
@@ -396,6 +396,23 @@
         <p class="warningBox">
             If you return true, then content will appear and return false, content will disappear. OppPosition parameter is position of dom content, and options is parameter that you set at Oppear method.
         </p>
+        <h3 class="h3-header">
+            Add other CSS
+        </h3>
+        <p class="p-content">
+            If you want other CSS effect, then you can add easily by adding your dictionary data at second parameter.
+        </p>
+        <div class="code-box">
+            <pre><code class="language-html">&lt;script src='jQuery.js'>
+    $('.disappear-example').Oppear({
+    },{
+        'CSS_property' : 'value'
+    });
+&lt;/script></code></pre>
+        </div>
+        <div class="exampleBox css-example">
+            color changed.
+        </div>
     </div><!--UI CENTERED GRID-->
 
 </div><!--UI CONTAINER-->
@@ -478,6 +495,12 @@
         });
         $('.disappear-example').Oppear({
             disappear : true,
+        });
+        $('.css-example').Oppear({
+        },{
+            'background-color' : 'rgb(220,252,220)',
+            'color' : 'rgb(100,250,100)',
+            'border' : '1px solid rgb(190,250,190)',
         });
 
     </script>
