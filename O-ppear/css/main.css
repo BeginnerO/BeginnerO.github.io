@@ -61,6 +61,14 @@ body{
     border:5px solid #d9d;
     color:#d9d;
 }
+.h2-header{
+    text-shadow:.05em .15em .2em #ccc;
+    font-weight:200;
+    font-size:2.5rem;
+    text-align:center;
+    color:#a6a;
+    font-family:'Oxygen',sans-serif;
+}
 .h3-header{
     font-weight:200;
     font-size:2rem;
@@ -137,4 +145,26 @@ pre{
 code{
     font-family: 'Titillium Web',sans-serif;
     font-weight:400;
+}
+.newFeature{
+    position:relative;
+    border: 1px solid rgb(248,228,228);
+    margin-top:20px;
+    background-color:#fff;
+    padding:15px;
+    box-shadow:0 .05em .15em rgb(220,202,202);
+}
+.loaderWrapper{
+    display:flex;
+    flex:0 1 auto;
+    align-items:center;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    height:100%;
+    background-color:rgba(240,220,220,1);
+}
+.innerLoader{
+    margin:auto;
 }

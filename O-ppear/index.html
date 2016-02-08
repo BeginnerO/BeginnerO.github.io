@@ -11,24 +11,26 @@
     <link rel="stylesheet" type="text/css" href="css/semantic.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <link rel="stylesheet" type="text/css" href="css/loaders.css">
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600,700,900|Oxygen:400,300,700|Josefin+Slab:400,600,700,300,100' rel='stylesheet' type='text/css'>
 </head>
 <body style="height:1700px;">
 <div class="left-fixed type3">
-    <a class="main-button" href="/download/Oppear_1.0.0.zip" download>
+    <a class="main-button" href="/download/Oppear_1.1.0.zip" download>
         Download.zip
     </a>
     <a class="main-empty-button" href='https://github.com/BeginnerO/O-ppear'>
         View on Github
     </a>
 </div>
+<div class="loaderWrapper loader"><div class="ball-scale-multiple innerLoader"><div></div><div></div><div></div></div></div>
 <div class="ui centered grid container">
     <div class="sixteen wide column">
         <h1 class="hero-title type1">
             O-ppear
         </h1>
         <h2 class="hero-sub type2">
-            V 1.0.1
+            V 1.1.0
         </h2>
     </div>
     <div class="ten wide computer column ten wide tablet column sixteen wide mobile column">
@@ -71,6 +73,74 @@
         </div>
         <div class="example1 exampleBox">
             this is example
+        </div>
+        <div class="sixteen wide column newFeature">
+            <h2 class="h2-header">
+                New Feature in 1.1
+            </h2>
+            <h3 class="h3-header">
+                First Appear
+            </h3>
+            <p class="p-content">
+                If oppear contents are at window area when page is loaded, you can select whether the contents appear automatically without no scroll one of example is main title of this page.
+            </p>
+            <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Data Type</th>
+                <th>Default</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>firstAppear</td>
+                <td>boolean</td>
+                <td>false</td>
+            </tr>
+            </tbody>
+            </table>
+            <h3 class="h3-header">
+                Loader
+            </h3>
+            <p class="p-content">
+                If loading is quite long due to internet speed, page size or whatever, Oppear content looks quite weird while loading. So! here loader comes. When first Oppear contents loaded, loader will disappear.
+            </p>
+            <div class="code-box">
+            <pre><code class="language-javascript">&lt;script src='jQuery.js'>
+    $('.loader').OppearLoader();
+&lt;/script></code></pre>
+            </div>
+            <h3 class="h3-header">
+                Disappear Function
+            </h3>
+            <p class="p-content">
+                you can make function that set the remove effect of loader.
+            </p>
+            <table class="ui celled table">
+                <thead>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Data Type</th>
+                    <th>Default</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>disAppear</td>
+                    <td>function</td>
+                    <td>please see below</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="code-box">
+            <pre><code class="language-javascript">function($this){
+    $this.fadeOut();
+}</code></pre>
+            </div>
+            <p class="p-content">
+                First parameter is selector that OppearLoader method is binded.
+            </p>
         </div>
         <h3 class="h3-header">
             Multiple Assignment
@@ -453,14 +523,16 @@
     <script src="js/jQuery.js"></script>
     <!--JAVASCRIPT Plugin-->
     <script src="js/semantic.js"></script>
-    <script src="js/Oppear_1.0.1.js"></script>
+    <script src="js/Oppear_1.1.0.js"></script>
     <script src="js/prism.js"></script>
     <script>
+        $('.loaderWrapper').OppearLoader();
         $('.type1').Oppear({
             transition : '1s ease-out',
             direction : 'right',
             disappear : true,
             offset : -1,
+            firstAppear : true,
         },{
         });
         $('.type2').Oppear({
@@ -468,6 +540,7 @@
             transition : '2s',
             disappear : true,
             offset : 150,
+            firstAppear : true,
         },{
             'font-size' : '3.5rem',
         });

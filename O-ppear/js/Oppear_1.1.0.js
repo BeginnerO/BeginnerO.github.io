@@ -9,37 +9,22 @@
 
 (function($){
     var OppearReady = false;
-    $.fn.getAllCSS = function(){
-        var str = $(this).css("cssText");
-        var iniStr = str.split(';');
-        var result = {};
-        for(var i = 0;i < iniStr.length;i++){
-            var eachStr = iniStr[i].split(':');
-            if(typeof(eachStr[1]) == 'string') result[eachStr[0].replace(" ","")] = eachStr[1].replace(" ","");
-            else result[eachStr[0].replace(" ","")] = eachStr[1];
-        }
-        return result;
-    }
 
-    getOriginalCSS = function(defCSS){
-        var result = {};
-        $('body').append('<div class="thisShouldntBe"></div>');
-        testCSS = $('.thisShouldntBe').getAllCSS();
-        for(var property in defCSS){
-            if(defCSS[property] != testCSS[property]){ result[property] = defCSS[property];}
-        }
-        $('.thisShouldntBe').remove();
-        return result;
-    }
-
-    $.fn.OppearLoader = function(parms,otherCSS){
-        $('body').css('background-color','#ccc');
+    $.fn.OppearLoader = function(parms){
+        var options = $.extend({}, $.fn.OppearLoader.defaults,parms);
+        $this = $(this);
         setCheck = setInterval(function(){
             if(OppearReady){
-                $('body').css('background-color','#fff');
+                options.disAppear($this);
                 clearInterval(setCheck);
             }
-        },500);
+        },200);
+    };
+
+    $.fn.OppearLoader.defaults = {
+        disAppear : function($this){
+            $this.fadeOut();
+        },
     };
     $.fn.Oppear = function(parms,otherCSS){
         function Appear(options,$Opp,preTranCss){
@@ -124,7 +109,11 @@
 
                         }
                     });
-                    if(options.firstAppear){
+                    if(options.firstAppear
+                        && !appearance
+                        && OppearReady
+                        && options.appearCondition(OppPosition,options)){
+                        appearance = true;
                         Appear(options,$Opp,preTranCss);
                     }
                 },options.delay);
